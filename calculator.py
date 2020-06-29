@@ -1,8 +1,8 @@
 
 
 # write your code here
-import math, argparse, sys
-
+import argparse, sys
+import differentiate_calc as diff_calc
     
 
 
@@ -32,7 +32,7 @@ if not args.interest:
 if args.t == 'diff':
     if args.payment:
         error_parameters()
-    differentiate_payment()
+    diff_calc.differentiate_payment(args)
 
 if args.t == 'annuity':
     if not args.payment: annuity_payment()
