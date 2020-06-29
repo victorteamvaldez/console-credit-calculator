@@ -3,6 +3,7 @@
 # write your code here
 import argparse, sys
 import differentiate_calc as diff_calc
+import annuity_calc
     
 
 
@@ -35,6 +36,6 @@ if args.t == 'diff':
     diff_calc.differentiate_payment(args)
 
 if args.t == 'annuity':
-    if not args.payment: annuity_payment()
-    if not args.principal: credit_principal_calculator()
-    if not args.periods: count_of_months()
+    if not args.payment: annuity_calc.annuity_payment(args)
+    if not args.principal: annuity_calc.credit_principal_calculator(args)
+    if not args.periods: annuity_calc.count_of_months(args)
